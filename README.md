@@ -1,6 +1,6 @@
-# 💾 Crunchyroll-Downloader
+# Crunchyroll-Downloader
 
-A simple crunchyroll downloader that allows you to download your favorite series and episodes directly from [Crunchyroll](https://www.crunchyroll.com).
+A sophisticated utility for downloading your preferred series and episodes directly from [Crunchyroll](https://www.crunchyroll.com).
 
 <p align="center">
   <a href="https://github.com/Crunchy-DL/Crunchy-Downloader">
@@ -22,49 +22,40 @@ A simple crunchyroll downloader that allows you to download your favorite series
   </a>
 </p>
 
+## Disclaimer
 
+_This application is not affiliated with, maintained, authorized, sponsored, or officially associated with Crunchyroll LLC or any of its subsidiaries or affiliates. The official Crunchyroll website can be found at [https://crunchyroll.com/](https://crunchyroll.com/)._
 
-# 📜 Disclaimer
+This tool is designed for private use only. Access to premium content requires a [Crunchyroll Premium](https://www.crunchyroll.com/premium) subscription.
 
-> I am in no way affiliated with, maintained, authorized, sponsored, or officially associated with Crunchyroll LLC or any of its subsidiaries or affiliates.
-> The official Crunchyroll website can be found at https://crunchyroll.com/.
+Using this application may violate the Terms of Service between you and the stream provider. The application enables you to download videos for offline viewing, which may be prohibited by law in your country. You are solely responsible for how you use Crunchyroll-Downloader.
 
-This tool is meant for private use only. You need a [Crunchyroll Premium](https://www.crunchyroll.com/premium) subscription to access premium content.
+## System Requirements
 
-The usage of this application may also cause a violation of the Terms of Service between you and the stream provider.
+- Windows 10 or Windows 11
+- .NET Desktop Runtime 8.0
+- Visual C++ Redistributable 2015-22 ([Issue #144](https://github.com/Crunchy-DL/Crunchy-Downloader/issues/144))
 
-This application enables you to download videos for offline viewing which may be forbidden by law in your country. You are entirely responsible for what happens when you use crunchy-downloader.
+## Features
 
-# ✏️ Software Requirements
+Comprehensive documentation available on our [GitHub Wiki](https://github.com/Crunchy-DL/Crunchy-Downloader/wiki)
 
-Windows 10 or Windows 11
+## DRM Decryption Guide
 
-.NET Desktop Runtime 8.0
+### Decryption Requirements
 
-Visual c++ redist 2015-22 https://github.com/Crunchy-DL/Crunchy-Downloader/issues/144
+Place one of the following tools in the `./lib/` directory:
 
-## ✨ Features
+- **mp4decrypt** - Essential for decryption. Available at [Bento4.com](http://www.bento4.com/)
+- **shaka-packager** - Alternative decryption tool. Available at [Shaka-Packager GitHub Releases](https://github.com/shaka-project/shaka-packager/releases/latest)
 
-[Github Wiki](https://github.com/Crunchy-DL/Crunchy-Downloader/wiki)
+### Instructions
 
+To decrypt DRM-protected content:
 
-# 🛠️ DRM Decryption Guide
+1. Acquire a Content Decryption Module (CDM)
+2. Place the following CDM files in the `./widevine/` directory:
+   - `device_client_id_blob.bin`
+   - `device_private_key.pem`
 
-## Decryption Requirements
-
-You will need one of the following tools placed in the `./lib/` directory.
-
-- **mp4decrypt** - Required for the decryption process. Available at [Bento4.com](http://www.bento4.com/).
-- **shaka-packager** - Required for the decryption process. Available at [Shaka-Packager GitHub Releases](https://github.com/shaka-project/shaka-packager/releases/latest).
-
-## Instructions
-
-To decrypt DRM content, it's essential to first acquire a CDM (Content Decryption Module). Once obtained, you will need to place the following CDM files into the `./widevine/` directory:
-
-- `device_client_id_blob.bin`
-- `device_private_key.pem`
-
-For legal reasons, the CDM is not included with the software package, and you must source it independently.
-
-
-
+For legal reasons, the CDM is not included with this software and must be obtained separately.
